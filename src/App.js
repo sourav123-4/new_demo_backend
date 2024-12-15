@@ -9,6 +9,10 @@ connectDB();
 const app = express();
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+  res.json("welcome to this page")
+})
+
 app.use('/api/users', userRoutes);
 
 app.use((err, req, res, next) => {
